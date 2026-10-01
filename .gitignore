@@ -1,0 +1,20 @@
+# Swift Package Manager
+.build/
+.swiftpm/
+Package.resolved
+
+# Xcode (in case anyone opens this via `swift package generate-xcodeproj` or Xcode)
+*.xcodeproj/
+*.xcworkspace/
+xcuserdata/
+DerivedData/
+
+# Built app bundle (produced by build_app.sh — regenerate, don't commit)
+/Boya.app
+
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
