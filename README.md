@@ -50,12 +50,15 @@ documented API and needs no extra permission.
 ## Build & run
 
 ```bash
-./build_app.sh           # debug build
-./build_app.sh release   # release build
-open Boya.app
+make run              # build (debug) + launch
+make app              # just build the .app bundle
+make app CONFIG=release
+make stop             # kill a running instance
+make clean            # remove .build/ and Boya.app
+make icon             # regenerate Resources/AppIcon.icns from icon.svg
 ```
 
-The script compiles the Swift package, wraps the binary in a minimal
+`make app` compiles the Swift package, wraps the binary in a minimal
 `.app` bundle (`Resources/Info.plist` sets `LSUIElement` so it's menu-bar
 only, no Dock icon), and signs it ad-hoc (`codesign --sign -`) so Gatekeeper
 allows local execution. It is **not notarized** — fine for running on your

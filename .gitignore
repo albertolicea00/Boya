@@ -9,7 +9,7 @@ Package.resolved
 xcuserdata/
 DerivedData/
 
-# Built app bundle (produced by build_app.sh — regenerate, don't commit)
+# Built app bundle (produced by `make app` — regenerate, don't commit)
 /Boya.app
 
 # macOS
