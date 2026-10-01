@@ -17,6 +17,7 @@ mkdir -p "$APP/Contents/Resources"
 
 cp "$BIN_PATH/Boya" "$APP/Contents/MacOS/Boya"
 cp "Resources/Info.plist" "$APP/Contents/Info.plist"
+cp "Resources/AppIcon.icns" "$APP/Contents/Resources/AppIcon.icns"
 
 codesign --force --deep --sign - "$APP"
 
