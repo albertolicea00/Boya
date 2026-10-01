@@ -1,3 +1,4 @@
+import AppKit
 import ServiceManagement
 import SwiftUI
 
@@ -102,9 +103,9 @@ private struct AboutSettingsView: View {
 
     var body: some View {
         VStack(spacing: 12) {
-            Image(systemName: "water.waves")
-                .font(.system(size: 48))
-                .foregroundStyle(.blue)
+            Image(nsImage: NSApp.applicationIconImage)
+                .resizable()
+                .frame(width: 64, height: 64)
             Text("Boya")
                 .font(.title2).fontWeight(.semibold)
             Text("Version \(version)")
